@@ -1,0 +1,31 @@
+// Design tokens (SCSS variables)
+
+// Colors
+$chalk: #f2f5f9;
+$paper: #ffffff;
+$ink: #15202b;
+$slate: #5b6878;
+$line: #d6dee8;
+$cobalt: #2446d8;
+$cobalt-deep: #1a33a3;
+$night: #0e1a2b;
+$sun: #ffd23f;
+
+// Type
+$font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+$font-body: "Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+// Layout
+$container-max: 1120px;
+$radius-sm: 8px;
+$radius-lg: 20px;
+$nav-tall: 96px;
+$nav-compact: 64px;
+$ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+// Breakpoints
+$breakpoints: (
+    phone: 600px,
+    tablet: 820px,
+    laptop: 1100px,
+);

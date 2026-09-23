@@ -1,3 +1,36 @@
+# MP1 Portfolio: Sources and Notes
+
+## Sources referenced
+- MDN Web Docs: `<dialog>` and `showModal()`, `Element.scrollIntoView()`, `Element.getBoundingClientRect()`, `scroll-margin-top`, CSS Grid, `background-attachment`, `@keyframes`, `prefers-reduced-motion`. https://developer.mozilla.org/
+- Sass documentation: variables, mixins, maps, `@use`, `@each`. https://sass-lang.com/documentation/
+- Font Awesome 6 (icon font via cdnjs): https://fontawesome.com/
+- Google Fonts: Bricolage Grotesque and Instrument Sans. https://fonts.google.com/
+- LLM assistance: Claude (Anthropic). Chat log link is listed in `llm_logs.csv`.
+
+## Assets
+All images and the demo video in `src/assets/` were generated for this project with a Python script (project illustrations, the CELaRAI pipeline animation, and the blueprint background), so no third-party media is used.
+
+## Feature map
+| Requirement | Where |
+|---|---|
+| Layout (full-width stripes, header, footer) | `<header id="home">`, sections, `<footer id="contact">` |
+| Sticky navbar | `.navbar` (`position: fixed`) |
+| Position indicator | `findCurrentSection()` in `src/js/main.js`, `.navbar__link.is-active` |
+| Navbar resizing | `.navbar.is-compact` (height and font size shrink) |
+| Smooth scrolling | `scrollIntoView({ behavior: "smooth" })` + `scroll-behavior: smooth` |
+| Carousel | Projects section, `Carousel` class, arrows + dots + swipe + arrow keys |
+| Multi-column layout | About section, `.columns` (3-column grid) |
+| Centering | Hero content centered with the `flex-center` mixin; all sections use a centered `.container` |
+| Responsiveness | Breakpoint mixin `below()`, fluid `clamp()` type |
+| Fixed background image | `.banner` (`background-attachment: fixed`) |
+| Modal | Project "Read case study" buttons open `<dialog>` modals |
+| Video | Demo section, HTML5 `<video>` |
+| SCSS features | `_tokens.scss` (variables, maps), `_mixins.scss` (mixins), nesting, `@each`, CSS custom properties |
+| CSS3 animations | Hero load sequence (`rise`), scroll cue (`bob`), modal open/close, carousel slide transitions |
+| Vector + social icons | Font Awesome icons, footer social links |
+
+---
+
 # MP #1: One Web Page To Rule Them All
 ### Due: Tuesday, Sep 22, 2026, 11:59PM CT
 

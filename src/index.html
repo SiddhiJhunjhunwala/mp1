@@ -4,10 +4,330 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
+        <meta name="description" content="Siddhi Jhunjhunwala is a Master of Computer Science student at UIUC and software engineer who builds scalable backends and LLM systems.">
+        <title>Siddhi Jhunjhunwala | Software Engineer</title>
+        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     </head>
     <body>
-        <h1>Demeo! Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <a class="skip-link" href="#about">Skip to content</a>
+
+        <!-- ============ NAVBAR ============ -->
+        <nav class="navbar" id="navbar" aria-label="Main">
+            <div class="navbar__inner">
+                <a class="navbar__brand" href="#home" data-nav-link>
+                    <span class="navbar__mark" aria-hidden="true">SJ</span>
+                    <span class="navbar__name">Siddhi Jhunjhunwala</span>
+                </a>
+                <button class="navbar__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+                <ul class="navbar__menu" id="nav-menu">
+                    <li><a class="navbar__link" href="#home" data-nav-link>Home</a></li>
+                    <li><a class="navbar__link" href="#about" data-nav-link>About</a></li>
+                    <li><a class="navbar__link" href="#projects" data-nav-link>Projects</a></li>
+                    <li><a class="navbar__link" href="#experience" data-nav-link>Experience</a></li>
+                    <li><a class="navbar__link" href="#demo" data-nav-link>Demo</a></li>
+                    <li><a class="navbar__link" href="#contact" data-nav-link>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- ============ HEADER / HERO ============ -->
+        <header class="hero section" id="home" data-section>
+            <div class="hero__content">
+                <p class="hero__intro">Hi, I'm</p>
+                <h1 class="hero__title">
+                    <span class="hero__line">Siddhi Jhunjhunwala.</span>
+                    <span class="hero__line hero__line--muted">I build reliable backends and the LLM systems that run on them.</span>
+                </h1>
+                <p class="hero__lede">
+                    Master of Computer Science student at UIUC and researcher in the Conversational AI Lab.
+                    Previously a software engineer at ARM and NetApp.
+                </p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="#projects" data-nav-link>See my projects</a>
+                    <a class="btn btn--ghost" href="#contact" data-nav-link>Get in touch</a>
+                </div>
+            </div>
+            <a class="hero__scroll" href="#about" data-nav-link aria-label="Scroll to About">
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+        </header>
+
+        <main>
+            <!-- ============ ABOUT (multi-column) ============ -->
+            <section class="about section" id="about" data-section>
+                <div class="container">
+                    <div class="section__head">
+                        <h2 class="section__title">About me</h2>
+                        <p class="section__lede">
+                            I spent three years shipping production software at ARM and NetApp, and now I'm
+                            pursuing my master's at the University of Illinois (GPA 3.93), where my research
+                            focuses on conversational AI, personalization, and LLM evaluation.
+                        </p>
+                    </div>
+                    <div class="columns">
+                        <article class="column">
+                            <i class="column__icon fa-solid fa-brain" aria-hidden="true"></i>
+                            <h3 class="column__title">AI &amp; LLM systems</h3>
+                            <p class="column__text">Agentic pipelines, retrieval, fine-tuning, and careful evaluation of model behavior.</p>
+                            <ul class="tags">
+                                <li>LLMs</li><li>RAG</li><li>LangChain</li><li>PyTorch</li><li>LoRA</li><li>ASR</li>
+                            </ul>
+                        </article>
+                        <article class="column">
+                            <i class="column__icon fa-solid fa-server" aria-hidden="true"></i>
+                            <h3 class="column__title">Backend engineering</h3>
+                            <p class="column__text">Secure, scalable services and data models built to hold up in production.</p>
+                            <ul class="tags">
+                                <li>Python</li><li>Go</li><li>Java</li><li>Node.js</li><li>PostgreSQL</li><li>Django</li>
+                            </ul>
+                        </article>
+                        <article class="column">
+                            <i class="column__icon fa-solid fa-gears" aria-hidden="true"></i>
+                            <h3 class="column__title">Infrastructure</h3>
+                            <p class="column__text">CI/CD, automation, and distributed systems that keep teams shipping.</p>
+                            <ul class="tags">
+                                <li>Docker</li><li>Kubernetes</li><li>Jenkins</li><li>Linux</li><li>Git</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ PROJECTS (carousel + modals) ============ -->
+            <section class="projects section" id="projects" data-section>
+                <div class="container">
+                    <div class="section__head">
+                        <h2 class="section__title">Selected projects</h2>
+                        <p class="section__lede">Research and engineering work I'm proud of. Open any project for the details.</p>
+                    </div>
+
+                    <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="Projects">
+                        <div class="carousel__viewport">
+                            <article class="slide is-active" aria-roledescription="slide" aria-label="1 of 4">
+                                <img class="slide__img" src="assets/project-bsem.jpg" alt="Chat conversation whose implicit reactions are turned into preference hypotheses">
+                                <div class="slide__body">
+                                    <h3 class="slide__title">Beyond Explicit Corrections</h3>
+                                    <p class="slide__text">Teaching LLM agents to adapt from implicit signals like rephrasing, frustration, and abandonment instead of explicit corrections.</p>
+                                    <ul class="tags"><li>LLM agents</li><li>GPT-4o</li><li>Llama-3.3-70B</li></ul>
+                                    <button class="btn btn--primary" type="button" data-modal-open="modal-bsem">Read case study</button>
+                                </div>
+                            </article>
+                            <article class="slide" aria-roledescription="slide" aria-label="2 of 4">
+                                <img class="slide__img" src="assets/project-noteworthy.jpg" alt="A clinical discharge summary next to a plain-language personalized rewrite">
+                                <div class="slide__body">
+                                    <h3 class="slide__title">Note-Worthy</h3>
+                                    <p class="slide__text">Personalized LLM rewrites of clinical documents, shaped by each reader's comfort with terminology, preferred tone, and level of detail.</p>
+                                    <ul class="tags"><li>LLMs</li><li>Personalization</li><li>User study</li></ul>
+                                    <button class="btn btn--primary" type="button" data-modal-open="modal-noteworthy">Read case study</button>
+                                </div>
+                            </article>
+                            <article class="slide" aria-roledescription="slide" aria-label="3 of 4">
+                                <img class="slide__img" src="assets/project-depression.jpg" alt="Pipeline from raw text to TF-IDF features to model evaluation metrics">
+                                <div class="slide__body">
+                                    <h3 class="slide__title">Depression Detection</h3>
+                                    <p class="slide__text">A published IEEE paper on detecting depression from unstructured text using NLP features and machine learning classifiers.</p>
+                                    <ul class="tags"><li>NLP</li><li>scikit-learn</li><li>IEEE</li></ul>
+                                    <button class="btn btn--primary" type="button" data-modal-open="modal-depression">Read case study</button>
+                                </div>
+                            </article>
+                            <article class="slide" aria-roledescription="slide" aria-label="4 of 4">
+                                <img class="slide__img" src="assets/project-flight.jpg" alt="Bar chart showing a delay growing across an aircraft's sequence of flights">
+                                <div class="slide__body">
+                                    <h3 class="slide__title">Flight Delay Prediction</h3>
+                                    <p class="slide__text">An XGBoost model trained on 2.7M+ airline records, using lag-based features to capture how delays spread from flight to flight.</p>
+                                    <ul class="tags"><li>Python</li><li>XGBoost</li><li>Data engineering</li></ul>
+                                    <button class="btn btn--primary" type="button" data-modal-open="modal-flight">Read case study</button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <button class="carousel__arrow carousel__arrow--prev" type="button" data-carousel-prev aria-label="Previous project">
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="carousel__arrow carousel__arrow--next" type="button" data-carousel-next aria-label="Next project">
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                        <div class="carousel__dots" role="group" aria-label="Choose project"></div>
+                    </div>
+                </div>
+
+                <!-- Modals -->
+                <dialog class="modal" id="modal-bsem" aria-labelledby="modal-bsem-title">
+                    <div class="modal__box">
+                        <button class="modal__close" type="button" data-modal-close aria-label="Close">
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                        </button>
+                        <h3 class="modal__title" id="modal-bsem-title">Beyond Explicit Corrections</h3>
+                        <p class="modal__meta">Implicit behavioral signal learning in LLM agents</p>
+                        <h4>The problem</h4>
+                        <p>Most personalization research assumes users explicitly correct an agent. Real users rarely do. They rephrase, ignore answers, get frustrated, or simply leave.</p>
+                        <h4>What I built</h4>
+                        <p>I'm extending MultiSessionCollab so agents learn from those implicit signals, and designing BSEM, a Behavioral Signal Extraction Module that detects them and turns them into structured preference hypotheses for memory-equipped agents.</p>
+                        <h4>Results</h4>
+                        <ul class="modal__list">
+                            <li>Benchmarking agent adaptation across GPT-4o and Llama-3.3-70B</li>
+                            <li>Signals modeled: rephrasing, ignoring, frustration, abandonment</li>
+                        </ul>
+                    </div>
+                </dialog>
+
+                <dialog class="modal" id="modal-noteworthy" aria-labelledby="modal-noteworthy-title">
+                    <div class="modal__box">
+                        <button class="modal__close" type="button" data-modal-close aria-label="Close">
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                        </button>
+                        <h3 class="modal__title" id="modal-noteworthy-title">Note-Worthy</h3>
+                        <p class="modal__meta">Personalized LLMs for medical document rewriting</p>
+                        <h4>The problem</h4>
+                        <p>Clinical documents are hard for patients to read, and a single simplified version doesn't fit every reader.</p>
+                        <h4>What I built</h4>
+                        <p>A preference elicitation pipeline that captures reader signals such as terminology comfort, tone, and detail level, then drives personalized LLM rewrites of clinical documents.</p>
+                        <h4>Results</h4>
+                        <ul class="modal__list">
+                            <li>Ran a within-subjects user study comparing original, generically simplified, and personalized rewrites</li>
+                            <li>Personalized rewrites scored higher on comprehension and satisfaction than generic simplification</li>
+                        </ul>
+                    </div>
+                </dialog>
+
+                <dialog class="modal" id="modal-depression" aria-labelledby="modal-depression-title">
+                    <div class="modal__box">
+                        <button class="modal__close" type="button" data-modal-close aria-label="Close">
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                        </button>
+                        <h3 class="modal__title" id="modal-depression-title">Depression Detection</h3>
+                        <p class="modal__meta">Machine learning and NLP, published with IEEE</p>
+                        <h4>The problem</h4>
+                        <p>Signs of depression often appear in how people write, but that text is unstructured and noisy.</p>
+                        <h4>What I built</h4>
+                        <p>A classification pipeline that turns raw text into features with tokenization, TF-IDF, and word embeddings, and handles noise, missing values, and imbalanced classes.</p>
+                        <h4>Results</h4>
+                        <ul class="modal__list">
+                            <li>Published as an IEEE paper</li>
+                            <li>Benchmarked several classifiers on accuracy, precision, recall, and F1 score</li>
+                        </ul>
+                    </div>
+                </dialog>
+
+                <dialog class="modal" id="modal-flight" aria-labelledby="modal-flight-title">
+                    <div class="modal__box">
+                        <button class="modal__close" type="button" data-modal-close aria-label="Close">
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                        </button>
+                        <h3 class="modal__title" id="modal-flight-title">Flight Delay Prediction</h3>
+                        <p class="modal__meta">Python, XGBoost, data engineering</p>
+                        <h4>The problem</h4>
+                        <p>A single late flight can delay every later flight that aircraft flies that day.</p>
+                        <h4>What I built</h4>
+                        <p>I processed 2.7M+ raw airline records and engineered lag-based features to model how delays propagate, then built an XGBoost classifier with target encoding and class weighting for extreme class imbalance.</p>
+                        <h4>Results</h4>
+                        <ul class="modal__list">
+                            <li>Reached 0.70 weighted F1</li>
+                            <li>Outperformed linear and bagging baselines</li>
+                        </ul>
+                    </div>
+                </dialog>
+            </section>
+
+            <!-- ============ FIXED BACKGROUND BANNER ============ -->
+            <section class="banner" aria-label="Personal motto">
+                <div class="banner__content">
+                    <p class="banner__quote">Make it work, make it right, then make it fast.</p>
+                    <p class="banner__cite">A principle I bring to every project</p>
+                </div>
+            </section>
+
+            <!-- ============ EXPERIENCE ============ -->
+            <section class="experience section" id="experience" data-section>
+                <div class="container">
+                    <div class="section__head">
+                        <h2 class="section__title">Experience</h2>
+                        <p class="section__lede">Three years in industry, now doing research at UIUC.</p>
+                    </div>
+                    <ol class="timeline">
+                        <li class="timeline__item">
+                            <p class="timeline__date">May 2026 to now</p>
+                            <div>
+                                <h3 class="timeline__role">Researcher</h3>
+                                <p class="timeline__org">Conversational AI Lab, UIUC</p>
+                                <p class="timeline__text">Building CELaRAI, an ASR and LLM pipeline for assessing children's spoken language. I'm benchmarking Whisper Large-v3 against open-weight LLMs (Llama, Qwen, DeepSeek) for noisy transcript correction, in collaboration with UCLA and literacy researchers.</p>
+                            </div>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__date">Jan 2026 to May 2026</p>
+                            <div>
+                                <h3 class="timeline__role">Researcher</h3>
+                                <p class="timeline__org">Alawini Lab, UIUC</p>
+                                <p class="timeline__text">Built an agentic, tool-calling LLM pipeline using Neo4j knowledge graphs and vector retrieval to track student misconceptions, and fine-tuned open models as a safety filter to prevent answer leakage.</p>
+                            </div>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__date">Nov 2025 to May 2026</p>
+                            <div>
+                                <h3 class="timeline__role">Software Engineer Intern</h3>
+                                <p class="timeline__org">Apollo, University of Illinois</p>
+                                <p class="timeline__text">Engineered a secure healthcare backend for multi-role patient and provider workflows, with a normalized PostgreSQL schema, soft deletes, and audit logging, plus LLM-powered chat assistants.</p>
+                            </div>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__date">Apr 2023 to Aug 2025</p>
+                            <div>
+                                <h3 class="timeline__role">Software Engineer</h3>
+                                <p class="timeline__org">ARM</p>
+                                <p class="timeline__text">Cut runtime by 68% through modularization and parallel processing of 1,000+ configuration cells. Owned 15 CI/CD projects and the full lifecycle of 3 critical projects, working with teams in Sophia Antipolis and the USA.</p>
+                            </div>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__date">Sept 2022 to Apr 2023</p>
+                            <div>
+                                <h3 class="timeline__role">Member of Technical Staff</h3>
+                                <p class="timeline__org">NetApp</p>
+                                <p class="timeline__text">Improved server performance 1.4x by optimizing SQL queries.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- ============ VIDEO ============ -->
+            <section class="demo section" id="demo" data-section>
+                <div class="container">
+                    <div class="section__head">
+                        <h2 class="section__title">Research in motion</h2>
+                        <p class="section__lede">How CELaRAI turns a child's noisy speech transcript into something that can be scored.</p>
+                    </div>
+                    <figure class="video">
+                        <video class="video__player" controls muted loop playsinline preload="metadata" poster="assets/video-poster.jpg">
+                            <source src="assets/celarai-pipeline.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
+                        <figcaption class="video__caption">An illustrated walkthrough of the pipeline with an example sentence.</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </main>
+
+        <!-- ============ FOOTER / CONTACT ============ -->
+        <footer class="footer section" id="contact" data-section>
+            <div class="container footer__inner">
+                <h2 class="footer__title">Let's build something together.</h2>
+                <p class="footer__text">I'm open to software engineering and ML roles. I graduate in May 2027.</p>
+                <a class="btn btn--light" href="mailto:siddhij2@illinois.edu">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email me
+                </a>
+                <ul class="social">
+                    <li><a class="social__link social__link--linkedin" href="https://www.linkedin.com/in/siddhi-jhunjhunwala" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+                    <li><a class="social__link social__link--github" href="https://github.com/SiddhiJhunjhunwala" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                    <li><a class="social__link social__link--email" href="mailto:siddhij2@illinois.edu" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+                </ul>
+                <p class="footer__copy">&copy; 2026 Siddhi Jhunjhunwala. Built by hand with HTML, SCSS, and JavaScript.</p>
+            </div>
+        </footer>
     </body>
 </html>
